@@ -1,0 +1,176 @@
+import 'package:flutter/material.dart';
+
+import '../models/product_model.dart';
+
+class CategoryItem {
+  final String title;
+  final IconData icon;
+
+  const CategoryItem(this.title, this.icon);
+}
+
+const categories = [
+  CategoryItem('All', Icons.grid_view_rounded),
+  CategoryItem('Festive', Icons.auto_awesome_rounded),
+  CategoryItem('Casual', Icons.sunny),
+  CategoryItem('Printed', Icons.local_florist_rounded),
+  CategoryItem('Premium', Icons.workspace_premium_rounded),
+];
+
+const onboardingItems = [
+  (
+    title: 'Curated Ethnic Elegance',
+    subtitle: 'Discover rich silhouettes, timeless prints, and occasion-ready looks.',
+    image: 'assets/images/products/product_maroon_kurti.jpg',
+  ),
+  (
+    title: 'Premium Styles, Local Assets',
+    subtitle: 'A polished fashion app experience built from your design and upgraded with better UI.',
+    image: 'assets/images/products/product_pink_suit.jpg',
+  ),
+  (
+    title: 'Smooth Shopping Experience',
+    subtitle: 'Wishlist, cart, checkout, and elegant product browsing — all in one clean flow.',
+    image: 'assets/images/products/product_blue_floral.jpg',
+  ),
+];
+
+const productDescription = 'Elevate your wardrobe with breathable, premium fabrics and elegant ethnic styling. This collection blends graceful silhouettes, festive details, and daily-wear comfort, making it ideal for both casual outings and special occasions.';
+
+final products = <ProductModel>[
+  ProductModel(
+    id: 'p1',
+    name: 'Maroon Heritage Kurti Set',
+    category: 'Festive',
+    price: 5400,
+    rating: 4.8,
+    reviews: 128,
+    imagePaths: ['assets/images/products/product_maroon_kurti.jpg'],
+    description: productDescription,
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: [Color(0xFF7A1F2B), Color(0xFFB85C38), Color(0xFF232323)],
+    isFeatured: true,
+    isNew: true,
+    subtitle: 'Marwar collection inspired',
+  ),
+  ProductModel(
+    id: 'p2',
+    name: 'Sky Blue Long Gown Kurti',
+    category: 'Premium',
+    price: 4700,
+    rating: 4.6,
+    reviews: 92,
+    imagePaths: ['assets/images/products/product_skyblue_gown.jpg'],
+    description: productDescription,
+    sizes: ['S', 'M', 'L'],
+    colors: [Color(0xFF8DD8F2), Color(0xFFE8F3F6)],
+    isFeatured: true,
+    subtitle: 'Flowy silhouette with tassel detail',
+  ),
+  ProductModel(
+    id: 'p3',
+    name: 'Emerald Panel Kurti Set',
+    category: 'Festive',
+    price: 4300,
+    rating: 4.5,
+    reviews: 76,
+    imagePaths: ['assets/images/products/product_green_set.jpg'],
+    description: productDescription,
+    sizes: ['M', 'L', 'XL'],
+    colors: [Color(0xFF0C6B4F), Color(0xFFC64B4B)],
+    isFeatured: true,
+    subtitle: 'Elegant contrast bottom styling',
+  ),
+  ProductModel(
+    id: 'p4',
+    name: 'Rose Embroidered Suit',
+    category: 'Premium',
+    price: 6900,
+    rating: 4.9,
+    reviews: 144,
+    imagePaths: ['assets/images/products/product_pink_suit.jpg'],
+    description: productDescription,
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: [Color(0xFFE98CA6), Color(0xFFF7D9DF)],
+    subtitle: 'Festive look with detailed embroidery',
+  ),
+  ProductModel(
+    id: 'p5',
+    name: 'Blue Floral Anarkali',
+    category: 'Printed',
+    price: 5900,
+    rating: 4.7,
+    reviews: 118,
+    imagePaths: ['assets/images/products/product_blue_floral.jpg'],
+    description: productDescription,
+    sizes: ['S', 'M', 'L'],
+    colors: [Color(0xFF2D5D8C), Color(0xFFDCEAF7)],
+    subtitle: 'Classic floral print and dupatta',
+  ),
+  ProductModel(
+    id: 'p6',
+    name: 'Amber Statement Kurti Set',
+    category: 'Casual',
+    price: 3800,
+    rating: 4.4,
+    reviews: 51,
+    imagePaths: ['assets/images/products/product_orange_set.jpg'],
+    description: productDescription,
+    sizes: ['M', 'L', 'XL'],
+    colors: [Color(0xFFD9772B), Color(0xFF663300)],
+    isNew: true,
+    subtitle: 'Vibrant statement everyday wear',
+  ),
+  ProductModel(
+    id: 'p7',
+    name: 'Navy Panel Dress',
+    category: 'Casual',
+    price: 3200,
+    rating: 4.3,
+    reviews: 39,
+    imagePaths: ['assets/images/products/product_navy_dress.jpg'],
+    description: productDescription,
+    sizes: ['S', 'M', 'L'],
+    colors: [Color(0xFF1D3557), Color(0xFFF6F8FB)],
+    subtitle: 'Minimal evening-ready dress',
+  ),
+  ProductModel(
+    id: 'p8',
+    name: 'Mint Stripe Cotton Kurti',
+    category: 'Casual',
+    price: 2600,
+    rating: 4.2,
+    reviews: 33,
+    imagePaths: ['assets/images/products/product_mint_stripe.jpg'],
+    description: productDescription,
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: [Color(0xFF8ED8D3), Color(0xFFFFFFFF)],
+    subtitle: 'Breathable cotton for daily use',
+  ),
+  ProductModel(
+    id: 'p9',
+    name: 'White Embroidery Lawn Kurti',
+    category: 'Printed',
+    price: 4100,
+    rating: 4.8,
+    reviews: 102,
+    imagePaths: ['assets/images/products/product_white_embroidery.jpg'],
+    description: productDescription,
+    sizes: ['S', 'M', 'L'],
+    colors: [Color(0xFFFFFFFF), Color(0xFFC43F71), Color(0xFF799940)],
+    subtitle: 'Fresh floral embroidery finish',
+  ),
+  ProductModel(
+    id: 'p10',
+    name: 'Ivory Paisley Printed Suit',
+    category: 'Premium',
+    price: 5200,
+    rating: 4.6,
+    reviews: 67,
+    imagePaths: ['assets/images/products/product_white_print.jpg'],
+    description: productDescription,
+    sizes: ['M', 'L', 'XL'],
+    colors: [Color(0xFFF4EFE8), Color(0xFF453C55)],
+    subtitle: 'Soft printed set with dupatta',
+  ),
+];

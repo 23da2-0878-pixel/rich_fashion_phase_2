@@ -1,0 +1,45 @@
+name: rich_fashion_phase1
+description: Rich Fashion – Flutter e-commerce app with Firebase backend.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Firebase core
+  firebase_core: ^3.6.0
+
+  # Firebase Auth (email/password + Google)
+  firebase_auth: ^5.3.1
+
+  # Cloud Firestore (products, cart, orders, users)
+  cloud_firestore: ^5.4.4
+
+  # Firebase Storage (product images)
+  firebase_storage: ^12.3.2
+
+  # Google Sign-In
+  google_sign_in: ^6.2.1
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/banners/
+    - assets/images/products/
